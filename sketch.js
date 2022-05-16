@@ -71,118 +71,174 @@ function draw() {
       case "houseBerkA":
         houseBerkAChoice();
         break;
-        case "houseSfB":
-          houseSfBChoice();
-          break;
-        case "houseSjB":
-          houseSjBChoice();
-          break;
+      case "houseSfB":
+        houseSfBChoice();
+        break;
+      case "houseSjB":
+        houseSjBChoice();
+        break;
 
 
 
-          case "WPOakRich1":
-            WPOakRich1Choice();
+       case "WPOakRich1":
+         WPOakRich1Choice();
+         break;
+      case "WPOakRichA":
+         WPOakRichAChoice();
+         break;
+       case "WPOakPoor1":
+         WPOakPoor1Choice();
+         break;
+       case "WPOakPoorA":
+         WPOakPoorAChoice();
+         break;
+       case "WPBerkRich1":
+         WPBerkRich1Choice();
+         break;
+       case "WPBerkRichA":
+         WPBerkRichAChoice();
+         break;
+       case "WPBerkPoor1":
+         WPBerkPoor1Choice();
+         break;
+       case "WPBerkPoorA":
+         WPBerkPoorAChoice();
+         break;
+
+         case "WPSfRich1":
+           WPSfRich1Choice();
+           break;
+         case "WPSfRichA":
+           WPSfRichAChoice();
+           break;
+         case "WPSfPoor1":
+           WPSfPoor1Choice();
+           break;
+         case "WPSfPoorA":
+           WPSfPoorAChoice();
+           break;
+         case "WPSjRich1":
+           WPSjRich1Choice();
+           break;
+         case "WPSjRichA":
+           WPSjRichAChoice();
+           break;
+         case "WPSjPoor1":
+           WPSjPoor1Choice();
+           break;
+         case "WPSjPoorA":
+           WPSjPoorAChoice();
+           break;
+
+
+//tech job endings
+         case "EndWOakRich1":
+           EndWOakRich1Choice();
+           break;
+        case "EndPOakRich1":
+            EndPOakRich1Choice();
             break;
-          case "WPOakRichA":
-            WPOakRichAChoice();
+        case "EndWOakPoor1":
+            EndWOakPoor1Choice();
             break;
-          case "WPOakPoor1":
-            WPOakPoor1Choice();
+        case "EndPOakPoor1":
+            EndPOakPoor1Choice();
             break;
-          case "WPOakPoorA":
-            WPOakPoorAChoice();
+
+        case "EndWBerkRich1":
+            EndWBerkRich1Choice();
             break;
-            case "WPBerkRich1":
-              WPBerkRich1Choice();
-              break;
-            case "WPBerkRichA":
-              WPBerkRichAChoice();
-              break;
-            case "WPBerkPoor1":
-              WPBerkPoor1Choice();
-              break;
-            case "WPBerkPoorA":
-              WPBerkPoorAChoice();
-              break;
+        case "EndPBerkRich1":
+            EndPBerkRich1Choice();
+            break;
+        case "EndWBerkPoor1":
+            EndWBerkPoor1Choice();
+            break;
+        case "EndPBerkPoor1":
+            EndPBerkPoor1Choice();
+            break;
 
-              case "WPSfRich1":
-                WPSfRich1Choice();
+            case "EndWSfRich1":
+              EndWSfRich1Choice();
+              break;
+            case "EndPSfRich1":
+              EndPSfRich1Choice();
+              break;
+              case "EndWSfPoor1":
+                EndWSfRich1Choice();
                 break;
-              case "WPSfRichA":
-                WPSfRichAChoice();
+              case "EndPSfPoor1":
+                EndPSfPoor1Choice();
                 break;
-              case "WPSfPoor1":
-                WPSfPoor1Choice();
-                break;
-              case "WPSfPoorA":
-                WPSfPoorAChoice();
-                break;
-                case "WPSjRich1":
-                  WPSjRich1Choice();
-                  break;
-                case "WPSjRichA":
-                  WPSjRichAChoice();
-                  break;
-                case "WPSjPoor1":
-                  WPSjPoor1Choice();
-                  break;
-                case "WPSjPoorA":
-                  WPSjPoorAChoice();
-                  break;
 
-
-
-                  case "EndWOakRich1":
-                    EndWOakRich1Choice();
+                case "EndWSjRich1":
+                  EndWSjRich1Choice();
+                  break;
+                case "EndPSjRich1":
+                  EndPSjRich1Choice();
+                  break;
+                  case "EndWSjPoor1":
+                    EndWSjPoor1Choice();
                     break;
-                  case "EndPOakRich1":
-                    EndPOakRich1Choice();
+                  case "EndPSfPoor1":
+                    EndPSjPoor1Choice();
                     break;
-                    case "EndWOakPoor1":
-                      EndWOakPoor1Choice();
-                      break;
-                    case "EndPOakPoor1":
-                      EndPOakPoor1Choice();
-                      break;
 
-                      case "EndWBerkRich1":
-                        EndWBerkRich1Choice();
-                        break;
-                      case "EndPBerkRich1":
-                        EndPBerkRich1Choice();
-                        break;
-                        case "EndWBerkPoor1":
-                          EndWBerkPoor1Choice();
-                          break;
-                        case "EndPBerkPoor1":
-                          EndPBerkPoor1Choice();
-                          break;
-
-                          case "EndWSfRich1":
-                            EndWSfRich1Choice();
-                            break;
-                          case "EndPSfRich1":
-                            EndPSfRich1Choice();
-                            break;
-                            case "EndWSfPoor1":
-                              EndWSfRich1Choice();
-                              break;
-                            case "EndPSfPoor1":
-                              EndPSfPoor1Choice();
-                              break;
-
-                              case "EndWSjRich1":
-                                EndWSjRich1Choice();
+                    //art job endings
+                             case "EndWOakRichA":
+                               EndWOakRichAChoice();
+                               break;
+                            case "EndPOakRichA":
+                                EndPOakRichAChoice();
                                 break;
-                              case "EndPSjRich1":
-                                EndPSjRich1Choice();
+                            case "EndWOakPoorA":
+                                EndWOakPoorAChoice();
                                 break;
-                                case "EndWSjPoor1":
-                                  EndWSjPoor1Choice();
+                            case "EndPOakPoorA":
+                                EndPOakPoorAChoice();
+                                break;
+
+                            case "EndWBerkRichA":
+                                EndWBerkRichAChoice();
+                                break;
+                            case "EndPBerkRichA":
+                                EndPBerkRichAChoice();
+                                break;
+                            case "EndWBerkPoorA":
+                                EndWBerkPoorAChoice();
+                                break;
+                            case "EndPBerkPoorA":
+                                EndPBerkPoorAChoice();
+                                break;
+
+                                case "EndWSfRichA":
+                                  EndWSfRichAChoice();
                                   break;
-                                case "EndPSfPoor1":
-                                  EndPSjPoor1Choice();
+                                case "EndPSfRichA":
+                                  EndPSfRichAChoice();
                                   break;
+                                  case "EndWSfPoorA":
+                                    EndWSfRichAChoice();
+                                    break;
+                                  case "EndPSfPoorA":
+                                    EndPSfPoorAChoice();
+                                    break;
+
+                                    case "EndWSjRichA":
+                                      EndWSjRichAChoice();
+                                      break;
+                                    case "EndPSjRichA":
+                                      EndPSjRichAChoice();
+                                      break;
+                                      case "EndWSjPoorA":
+                                        EndWSjPoorAChoice();
+                                        break;
+                                      case "EndPSfPoorA":
+                                        EndPSjPoorAChoice();
+                                        break;
+                                        case "EndPSjPoorA":
+                                          EndPSjPoorAChoice();
+                                          break;
 
 
   }
@@ -303,8 +359,15 @@ function keyReleased() {
       gameState = 'WPSfPoorA';
     }
 
+  } else if (gameState === "houseSjB") {
+    if (key === '1' || key === '1') {
+      gameState = 'WPSjRichA';
+    } else if (key === '2' || key === '2') {
+      gameState = 'WPSjPoorA';
+    }
 
 
+//tech job endings
   } else if (gameState === "WPOakRich1") {
     if (key === '1' || key === '1') {
       gameState = 'EndWOakRich1';
@@ -360,6 +423,63 @@ function keyReleased() {
     } else if (key === '2' || key === '2') {
       gameState = 'EndPSjPoor1';
     }
+
+    //art job endings
+  } else if (gameState === "WPOakRichA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWOakRichA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPOakRichA';
+        }
+
+      } else if (gameState === "WPOakPoorA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWOakPoorA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPOakPoorA';
+        }
+
+      } else if (gameState === "WPBerkRichA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWBerkRichA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPBerkRichA';
+        }
+
+      } else if (gameState === "WPBerkPoorA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWBerkPoorA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPBerkPoorA';
+        }
+
+      } else if (gameState === "WPSfRichA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWSfRichA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPSfRichA';
+        }
+
+      } else if (gameState === "WPSfPoorA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWSfPoorA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPSfPoorA';
+        }
+
+      } else if (gameState === "WPSjRichA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWSjRichA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPSjRichA';
+        }
+
+      } else if (gameState === "WPSjPoorA") {
+        if (key === '1' || key === '1') {
+          gameState = 'EndWSjPoorA';
+        } else if (key === '2' || key === '2') {
+          gameState = 'EndPSjPoorA';
+        }
 
   }
 }
@@ -704,6 +824,122 @@ function EndWSjPoor1Choice() {
 }
 
 function EndPSjPoor1Choice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the small house', width * 0.5, height * 0.66);
+}
+
+
+
+//art job + big house endings
+function EndWOakRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur big house', width * 0.5, height * 0.66);
+}
+
+function EndPOakRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the big house', width * 0.5, height * 0.66);
+}
+
+function EndWBerkRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur big house', width * 0.5, height * 0.66);
+}
+
+function EndPBerkRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the big house', width * 0.5, height * 0.66);
+}
+
+function EndWSfRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur big house', width * 0.5, height * 0.66);
+}
+
+function EndPSfRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the big house', width * 0.5, height * 0.66);
+}
+
+function EndWSjRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur big house', width * 0.5, height * 0.66);
+}
+
+function EndPSjRichAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the big house', width * 0.5, height * 0.66);
+}
+
+//art job + small house endings
+function EndWOakPoorAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur small house', width * 0.5, height * 0.66);
+}
+
+function EndPOakPoorAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the small house', width * 0.5, height * 0.66);
+}
+
+function EndWBerkPoorAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur small house', width * 0.5, height * 0.66);
+}
+
+function EndPBerkPoorAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the small house', width * 0.5, height * 0.66);
+}
+
+function EndWSfPoorAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur small house', width * 0.5, height * 0.66);
+}
+
+function EndPSfPoorAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to have fun u still kept the small house', width * 0.5, height * 0.66);
+}
+
+function EndWSjPoorAChoice() {
+  background(255);
+  textSize(10);
+  textAlign(CENTER);
+  text('u chose to work hard u kept ur small house', width * 0.5, height * 0.66);
+}
+
+function EndPSjPoorAChoice() {
   background(255);
   textSize(10);
   textAlign(CENTER);
