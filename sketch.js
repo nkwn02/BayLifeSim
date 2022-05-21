@@ -1,10 +1,14 @@
 let myLogo;
 
+let myFont;
+
 let logoAni;
 
 let gameState = 'title';
 
 function preload(){
+
+  myFont = loadFont('assets/PublicPixel.ttf')
 
   logoAni = loadAnimation('assets/baylogo1.png', 'assets/baylogo2.png');
 
@@ -36,6 +40,7 @@ function preload(){
 function setup() {
   createCanvas(500, 550);
   myLogo = new logo(width/2, height/5, 150);
+  textFont(myFont);
 }
 
 function draw() {
@@ -735,7 +740,7 @@ function titleScreen() {
   ellipse()
   fill(248, 161, 69);
   //rect(0, 400, 500);
-  textSize(40);
+  textSize(20);
   textAlign(CENTER);
   text('Press Space to Start', width * 0.5, height * 0.50);
 myLogo.display();
@@ -745,7 +750,7 @@ myLogo.display();
 
 function setupScreen() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(248, 161, 69);
   text('You just graduated college and are planning to move to the Bay Area!', width * 0.5, height * 0.56);
@@ -753,7 +758,7 @@ text('The Bay is a an area of cities located in Northern California.', width * 0
 text('The area is a hub for tech, arts, culture, and much much more!', width * 0.5, height * 0.64);
 text('Your hopes are high, and things looking bright.', width * 0.5, height * 0.68);
 text('Surely nothing could go wrong!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(20);
 fill(255, 255, 255);
 text('Press Space to Continue', width * 0.5, height * 0.90);
 
@@ -762,7 +767,7 @@ text('Press Space to Continue', width * 0.5, height * 0.90);
 
 function jobChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(248, 161, 69);
   text('The Bay is home to Silicon Valley.', width * 0.5, height * 0.56);
@@ -774,7 +779,7 @@ text('Working in this area around other creatives will surely help your work!', 
 text('What did you study in college again?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Tech or 2 for Art', width * 0.5, height * 0.90);
 
@@ -784,7 +789,7 @@ text('What did you study in college again?', width * 0.5, height * 0.80);
 
 function location1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(248, 161, 69);
 
@@ -796,14 +801,14 @@ text('Where would you like to live?', width * 0.5, height * 0.80);
 
   image(locationImg, 100, 30);
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Eastbay or 2 for the Other Side of the Bay', width * 0.5, height * 0.90);
 }
 
 function locationAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(248, 161, 69);
 
@@ -815,14 +820,14 @@ function locationAChoice() {
 
   image(locationImg, 100, 30);
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Eastbay or 2 for the Other Side of the Bay', width * 0.5, height * 0.90);
 }
 
 function city1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
 text('You chose the Eastbay!', width * 0.5, height * 0.56);
@@ -835,7 +840,7 @@ text('Houses here are afforable, and in areas for people that enjoy quiet.', wid
 text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(20);
+  textSize(12);
   fill(255, 255, 255);
   text('Press 1 for Oakland or 2 for Berkeley', width * 0.5, height * 0.90);
 
@@ -845,12 +850,12 @@ text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 function city2Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
-text('You chose the Eastbay!', width * 0.5, height * 0.56);
+text('You chose the Other Bay!', width * 0.5, height * 0.56);
 fill(248, 161, 69);
-text('Oakland is a historic city with great culture, and a bustling lifestyle.', width * 0.5, height * 0.60);
+text('San Francisco is a historic city with great culture, and a bustling lifestyle.', width * 0.5, height * 0.60);
 text('San Francisco has been hard with soaring housing prices and gentrification.', width * 0.5, height * 0.64);
 text('Houses here will not be cheap.', width * 0.5, height * 0.68);
 text('San Jose is a great mix of city and suburbs', width * 0.5, height * 0.72);
@@ -858,7 +863,7 @@ text('Houses here are can become pricey, yet some afforable options remain.', wi
 text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(20);
+  textSize(10);
   fill(255, 255, 255);
   text('Press 1 for San Francisco or 2 for San Jose', width * 0.5, height * 0.90);
 
@@ -868,7 +873,7 @@ text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 function cityAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
 text('You chose the Eastbay!', width * 0.5, height * 0.56);
@@ -881,7 +886,7 @@ text('Houses here are afforable, and in areas for people that enjoy quiet.', wid
 text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(20);
+  textSize(12);
   fill(255, 255, 255);
   text('Press 1 for Oakland or 2 for Berkeley', width * 0.5, height * 0.90);
 
@@ -891,12 +896,12 @@ text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 function cityBChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
-text('You chose the Eastbay!', width * 0.5, height * 0.56);
+text('You chose the Other Bay!', width * 0.5, height * 0.56);
 fill(248, 161, 69);
-text('Oakland is a historic city with great culture, and a bustling lifestyle.', width * 0.5, height * 0.60);
+text('San Francisco is a historic city with great culture, and a bustling lifestyle.', width * 0.5, height * 0.60);
 text('San Francisco has been hard with soaring housing prices and gentrification.', width * 0.5, height * 0.64);
 text('Houses here will not be cheap.', width * 0.5, height * 0.68);
 text('San Jose is a great mix of city and suburbs', width * 0.5, height * 0.72);
@@ -904,7 +909,7 @@ text('Houses here are can become pricey, yet some afforable options remain.', wi
 text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(20);
+  textSize(10);
   fill(255, 255, 255);
   text('Press 1 for San Francisco or 2 for San Jose', width * 0.5, height * 0.90);
 
@@ -914,7 +919,7 @@ text('Which city do you want to live in?', width * 0.5, height * 0.80);
 
 function houseOak1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
 text('You chose Oakland!', width * 0.5, height * 0.56);
@@ -927,7 +932,7 @@ text('1 is far more expensive than 2', width * 0.5, height * 0.76);
 text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Expensive House or 2 for the Cheaper House', width * 0.5, height * 0.90);
 
@@ -937,7 +942,7 @@ text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 function houseSf2Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
 text('You chose San Francisco!', width * 0.5, height * 0.56);
@@ -950,7 +955,7 @@ text('1 is far more expensive than 2.', width * 0.5, height * 0.76);
 text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Expensive House or 2 for the Cheaper House', width * 0.5, height * 0.90);
 
@@ -960,7 +965,7 @@ text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 function houseBerk1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose Berkeley!', width * 0.5, height * 0.56);
@@ -973,7 +978,7 @@ function houseBerk1Choice() {
   text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Expensive House or 2 for the Cheaper House', width * 0.5, height * 0.90);
 
@@ -983,7 +988,7 @@ function houseBerk1Choice() {
 
 function houseSj2Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose San Jose!', width * 0.5, height * 0.56);
@@ -996,7 +1001,7 @@ function houseSj2Choice() {
   text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Expensive House or 2 for the Cheaper House', width * 0.5, height * 0.90);
 
@@ -1006,7 +1011,7 @@ function houseSj2Choice() {
 
 function houseOakAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
 text('You chose Oakland!', width * 0.5, height * 0.56);
@@ -1019,7 +1024,7 @@ text('1 is far more expensive than 2', width * 0.5, height * 0.76);
 text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Expensive house or 2 for the Cheaper house', width * 0.5, height * 0.90);
 
@@ -1029,7 +1034,7 @@ text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 function houseSfBChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose San Francisco!', width * 0.5, height * 0.56);
@@ -1042,7 +1047,7 @@ function houseSfBChoice() {
   text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Expensive House or 2 for the Cheaper House', width * 0.5, height * 0.90);
 
@@ -1052,7 +1057,7 @@ function houseSfBChoice() {
 
 function houseBerkAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose Berkeley!', width * 0.5, height * 0.56);
@@ -1065,7 +1070,7 @@ function houseBerkAChoice() {
   text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the expensive house or 2 for the cheaper house', width * 0.5, height * 0.90);
 
@@ -1075,7 +1080,7 @@ function houseBerkAChoice() {
 
 function houseSjBChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose San Jose!', width * 0.5, height * 0.56);
@@ -1088,7 +1093,7 @@ function houseSjBChoice() {
   text('Which house do you want to live in?', width * 0.5, height * 0.80);
 
 
-  textSize(17);
+  textSize(8);
   fill(255, 255, 255);
   text('Press 1 for the Expensive House or 2 for the Cheaper House', width * 0.5, height * 0.90);
 
@@ -1100,7 +1105,7 @@ function houseSjBChoice() {
 //houses chosen tech
 function WPOakRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the expensive house!', width * 0.5, height * 0.56);
@@ -1113,7 +1118,7 @@ function WPOakRich1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1123,7 +1128,7 @@ function WPOakRich1Choice() {
 
 function WPOakPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the cheap house!', width * 0.5, height * 0.56);
@@ -1136,7 +1141,7 @@ function WPOakPoor1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1146,7 +1151,7 @@ function WPOakPoor1Choice() {
 
 function WPBerkRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the expensive house!', width * 0.5, height * 0.56);
@@ -1159,7 +1164,7 @@ function WPBerkRich1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1169,7 +1174,7 @@ function WPBerkRich1Choice() {
 
 function WPBerkPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the cheap house!', width * 0.5, height * 0.56);
@@ -1182,7 +1187,7 @@ function WPBerkPoor1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1192,7 +1197,7 @@ function WPBerkPoor1Choice() {
 
 function WPSfRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the expensive house!', width * 0.5, height * 0.56);
@@ -1205,7 +1210,7 @@ function WPSfRich1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1215,7 +1220,7 @@ function WPSfRich1Choice() {
 
 function WPSfPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the cheap house!', width * 0.5, height * 0.56);
@@ -1228,7 +1233,7 @@ function WPSfPoor1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1238,7 +1243,7 @@ function WPSfPoor1Choice() {
 
 function WPSjRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the expensive house!', width * 0.5, height * 0.56);
@@ -1251,7 +1256,7 @@ function WPSjRich1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1261,7 +1266,7 @@ function WPSjRich1Choice() {
 
 function WPSjPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the cheap house!', width * 0.5, height * 0.56);
@@ -1274,7 +1279,7 @@ function WPSjPoor1Choice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1293,7 +1298,7 @@ function WPOakRichAChoice() {
 
 function WPOakPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the cheap house!', width * 0.5, height * 0.56);
@@ -1306,7 +1311,7 @@ function WPOakPoorAChoice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1316,7 +1321,7 @@ function WPOakPoorAChoice() {
 
 function WPBerkRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the expensive house!', width * 0.5, height * 0.56);
@@ -1329,7 +1334,7 @@ function WPBerkRichAChoice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1339,7 +1344,7 @@ function WPBerkRichAChoice() {
 
 function WPBerkPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the cheap house!', width * 0.5, height * 0.56);
@@ -1352,7 +1357,7 @@ function WPBerkPoorAChoice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1376,7 +1381,7 @@ function WPSfPoorAChoice() {
 
 function WPSjRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the expensive house!', width * 0.5, height * 0.56);
@@ -1389,7 +1394,7 @@ function WPSjRichAChoice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1399,7 +1404,7 @@ function WPSjRichAChoice() {
 
 function WPSjPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose the cheap house!', width * 0.5, height * 0.56);
@@ -1412,7 +1417,7 @@ function WPSjPoorAChoice() {
   text('Which lifestyle do you want?', width * 0.5, height * 0.80);
 
 
-  textSize(30);
+  textSize(15);
   fill(255, 255, 255);
   text('Press 1 for Work or 2 for Play', width * 0.5, height * 0.90);
 
@@ -1423,15 +1428,15 @@ function WPSjPoorAChoice() {
 //tech job + big house endings
 function EndWOakRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(8);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
   fill(248, 161, 69);
 text('You worked really hard and got a lot of money.', width * 0.5, height * 0.60);
 text('Since you didnt want to go out, you never met any people.', width * 0.5, height * 0.64);
-text('You died alone, your only friend being Benjamin Franklin', width * 0.5, height * 0.68);
-textSize(30);
+text('You died alone, your only friend was Benjamin Franklin', width * 0.5, height * 0.68);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1441,7 +1446,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPOakRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(8);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1450,7 +1455,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('This resulted in no work being done.', width * 0.5, height * 0.64);
 text('You got fired and had to move into your friends closet.', width * 0.5, height * 0.68);
 text('I guess you only live once...', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1460,7 +1465,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWBerkRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(8);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1469,7 +1474,7 @@ text('You worked hard and made that money.', width * 0.5, height * 0.60);
 text('You lived a regular life.', width * 0.5, height * 0.64);
 text('You got married, had kids, and retired at 71', width * 0.5, height * 0.68);
 text('You had a satisfying life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1479,7 +1484,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPBerkRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1488,7 +1493,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('You attended a lot of UC Berkeley parties.', width * 0.5, height * 0.64);
 text('You had so much fun, you ended up quitting your job and joining greek life', width * 0.5, height * 0.68);
 text('Your parents are no longer proud of you!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1498,7 +1503,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSfRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(8);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1507,7 +1512,7 @@ text('You worked hard and payed your rent.', width * 0.5, height * 0.60);
 text('You work during the week, and relax on the weekends.', width * 0.5, height * 0.64);
 text('Life in the city is good, and you couldnt be happier.', width * 0.5, height * 0.68);
 text('You had a happy life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1517,7 +1522,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSfRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(8);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1526,7 +1531,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('You did not go to work, and only payed 1 month of rent.', width * 0.5, height * 0.64);
 text('You got evicted and became homeless.', width * 0.5, height * 0.68);
 text('You had a regretful life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1536,7 +1541,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSjRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1545,7 +1550,7 @@ text('You worked hard and were able to pay rent.', width * 0.5, height * 0.60);
 text('You didnt really do much else except for go out once a month.', width * 0.5, height * 0.64);
 text('You got into bread making in you mid 40s', width * 0.5, height * 0.68);
 text('You had a solid life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1555,7 +1560,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSjRich1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1564,7 +1569,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('You were not able to sustain your rent', width * 0.5, height * 0.64);
 text('You snuck into the Art Building at SJSU and live there now', width * 0.5, height * 0.68);
 text('You had a hidden life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1575,7 +1580,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 //tech job + small house endings
 function EndWOakPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1584,7 +1589,7 @@ text('You made a lot of money.', width * 0.5, height * 0.60);
 text('You bought a boat with all the extra money you made.', width * 0.5, height * 0.64);
 text('Sailing the waters of the Bay is your calling.', width * 0.5, height * 0.68);
 text('You had a freeing life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1594,7 +1599,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPOakPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(6);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1603,7 +1608,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('You balanced both work and fun.', width * 0.5, height * 0.64);
 text('You party on the weekends, but perfer not be out so late in your neighboorhood', width * 0.5, height * 0.68);
 text('You had a happy life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1613,7 +1618,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWBerkPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(8);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1621,7 +1626,7 @@ function EndWBerkPoor1Choice() {
 text('You made a lot of money.', width * 0.5, height * 0.60);
 text('You literally didnt do anything else.', width * 0.5, height * 0.64);
 text('You had a boring life.', width * 0.5, height * 0.68);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1631,7 +1636,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPBerkPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1640,7 +1645,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('You got bored of partying fast.', width * 0.5, height * 0.64);
 text('You got a second job as a professor at UC Berkeley', width * 0.5, height * 0.68);
 text('You had a stressful life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1650,7 +1655,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSfPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1659,7 +1664,7 @@ text('You were able to pay rent.', width * 0.5, height * 0.60);
 text('When working during the day, you take hikes during your breaks.', width * 0.5, height * 0.64);
 text('You got really fit, and married a supermodel', width * 0.5, height * 0.68);
 text('You had a healthy life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1669,7 +1674,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSfPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(8);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1678,7 +1683,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('You mostly work, but go out sometimes.', width * 0.5, height * 0.64);
 text('You adopted a dog named Chris.', width * 0.5, height * 0.68);
 text('You and Chris had an amazing life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1688,7 +1693,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSjPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1697,7 +1702,7 @@ text('You worked hard and had some free time.', width * 0.5, height * 0.60);
 text('You found your soul mate at work.', width * 0.5, height * 0.64);
 text('You both retired young and traveled the world.', width * 0.5, height * 0.68);
 text('You had an awesome life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1707,7 +1712,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSjPoor1Choice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1716,7 +1721,7 @@ text('You went out and lived your life.', width * 0.5, height * 0.60);
 text('You balanced both work and fun.', width * 0.5, height * 0.64);
 text('While partying, you met friends for life.', width * 0.5, height * 0.68);
 text('You had a friendly life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1729,7 +1734,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 //art job + big house endings
 function EndWOakRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You coudlnt afford rent', width * 0.5, height * 0.56);
@@ -1738,7 +1743,7 @@ text('Rent was way to high and not possible.', width * 0.5, height * 0.60);
 text('You got really discouraged and moved back home', width * 0.5, height * 0.64);
 text('You spend your days thinking what couldve been', width * 0.5, height * 0.68);
 text('You had a regretful life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1748,7 +1753,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPOakRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1757,7 +1762,7 @@ text('You never even payed 1 month of rent.', width * 0.5, height * 0.60);
 text('You sold all your things just to try, but failed.', width * 0.5, height * 0.64);
 text('You live with an old lady named Susane, cleaning her house as rent.', width * 0.5, height * 0.68);
 text('You had a suprisingly ok life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1767,7 +1772,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWBerkRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1776,7 +1781,7 @@ text('Your art flourished in the quiet', width * 0.5, height * 0.60);
 text('You sold a lot of your work.', width * 0.5, height * 0.64);
 text('You retired very young, and fufilled all your dreams.', width * 0.5, height * 0.68);
 text('You had a perfect life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1786,7 +1791,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPBerkRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1795,7 +1800,7 @@ text('You lived your life.', width * 0.5, height * 0.60);
 text('You still got some work in, and make great work.', width * 0.5, height * 0.64);
 text('In your free time, you graffiti on walls.', width * 0.5, height * 0.68);
 text('You had a rebellious life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1805,7 +1810,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSfRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You could not pay rent!', width * 0.5, height * 0.56);
@@ -1814,7 +1819,7 @@ text('The SF rent was way to high to maintain.', width * 0.5, height * 0.60);
 text('You got discouraged and moved to a tent on the beach.', width * 0.5, height * 0.64);
 text('You now spend your days painting the sunsets.', width * 0.5, height * 0.68);
 text('You had a scenic life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1824,7 +1829,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSfRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You could not pay rent!', width * 0.5, height * 0.56);
@@ -1832,7 +1837,7 @@ function EndPSfRichAChoice() {
 text('You sold all your belongings for food.', width * 0.5, height * 0.60);
 text('You now live in a friends bathroom', width * 0.5, height * 0.64);
 text('You had an ok life.', width * 0.5, height * 0.68);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1842,7 +1847,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSjRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1851,7 +1856,7 @@ text('Your art went to a whole new level.', width * 0.5, height * 0.60);
 text('You sold a lot of your work.', width * 0.5, height * 0.64);
 text('You are now a world renowned artist.', width * 0.5, height * 0.68);
 text('You had an artistic life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1861,7 +1866,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSjRichAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1870,7 +1875,7 @@ text('You couldnt sustain your lifestyle', width * 0.5, height * 0.60);
 text('The partying got to you, and you forgot to pay rent', width * 0.5, height * 0.64);
 text('You ended up having to move back home into your moms basement', width * 0.5, height * 0.68);
 text('Your mom is no longer proud of you!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1881,7 +1886,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 //art job + small house endings
 function EndWOakPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1890,7 +1895,7 @@ text('Your art was appreciated.', width * 0.5, height * 0.60);
 text('You worked, got married, and adopted 2 children.', width * 0.5, height * 0.64);
 text('Both your kids became doctors.', width * 0.5, height * 0.68);
 text('You had a proud life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1900,7 +1905,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPOakPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1909,7 +1914,7 @@ text('Your art suffered', width * 0.5, height * 0.60);
 text('You sold just enough to pay rent, but partied the rest of your time.', width * 0.5, height * 0.64);
 text('You turned you life around in your 60s.', width * 0.5, height * 0.68);
 text('You had the greatest comeback!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1919,7 +1924,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWBerkPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -1928,7 +1933,7 @@ text('Your art flourished in the quiet', width * 0.5, height * 0.60);
 text('You sold a lot of your work.', width * 0.5, height * 0.64);
 text('You had lots of free time, and took up rock climbing', width * 0.5, height * 0.68);
 text('You had a cardiovascular life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1938,7 +1943,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPBerkPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -1947,7 +1952,7 @@ text('You balanced your work and life', width * 0.5, height * 0.60);
 text('Your work was not really effected by your partying', width * 0.5, height * 0.64);
 text('You retired at a reasonable age.', width * 0.5, height * 0.68);
 text('You had a good life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1957,7 +1962,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSfPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You could not afford rent!', width * 0.5, height * 0.56);
@@ -1966,7 +1971,7 @@ text('The SF housing prices were to great for you.', width * 0.5, height * 0.60)
 text('You moved to a cave never to be seen again.', width * 0.5, height * 0.64);
 text('You lived a descreet life.', width * 0.5, height * 0.68);
 
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1976,7 +1981,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSfPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You could not afford rent!', width * 0.5, height * 0.56);
@@ -1985,7 +1990,7 @@ text('The SF housing prices were to great for you.', width * 0.5, height * 0.60)
 text('You moved to a cave never to be seen again.', width * 0.5, height * 0.64);
 text('You lived a descreet life.', width * 0.5, height * 0.68);
 
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -1995,7 +2000,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndWSjPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to work hard!', width * 0.5, height * 0.56);
@@ -2004,7 +2009,7 @@ text('You balanced your work and life', width * 0.5, height * 0.60);
 text('Your work was presented at the ICA multiple times', width * 0.5, height * 0.64);
 text('You are a local hero.', width * 0.5, height * 0.68);
 text('You had an influential life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
@@ -2015,7 +2020,7 @@ text('Press Space to Try Again', width * 0.5, height * 0.90);
 
 function EndPSjPoorAChoice() {
   background(21, 21, 21);
-  textSize(13);
+  textSize(7);
   textAlign(CENTER);
   fill(255, 255, 255);
   text('You chose to have fun!', width * 0.5, height * 0.56);
@@ -2024,7 +2029,7 @@ text('You procrastinated all your work.', width * 0.5, height * 0.60);
 text('The stress got to much for you and you quit.', width * 0.5, height * 0.64);
 text('You ended up rethinking your decisions.', width * 0.5, height * 0.68);
 text('You had a regretful life!', width * 0.5, height * 0.72);
-textSize(30);
+textSize(17);
 fill(255, 255, 255);
 text('Press Space to Try Again', width * 0.5, height * 0.90);
 
